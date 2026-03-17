@@ -2,11 +2,20 @@
 #   Vehicle Parking Allocator — Interactive (Google Colab)
 #   Uses ipywidgets for a live UI inside the notebook
 # ============================================================
+#
+#   Requirements (requirements.txt):
+#   ---------------------------------
+#   ipywidgets>=7.7.0
+#   IPython>=7.0.0
+#
+#   Install command:
+#   ---------------------------------
+#   pip install -r requirements.txt
+#      OR (directly):
+#   pip install ipywidgets IPython
+# ============================================================
 
-# ── Step 1: Install required library ────────────────────────
-!pip install ipywidgets --quiet
-
-# ── Step 2: Imports ─────────────────────────────────────────
+# ── Step 1: Imports ─────────────────────────────────────────
 import ipywidgets as widgets
 from IPython.display import display, clear_output
 
@@ -125,7 +134,7 @@ def on_reset_clicked(_):
     type_dropdown.value = "-- Select --"
     with msg_out:
         clear_output(wait=True)
-        print("🔄  Parking slot reset ho gaya.")
+        print("🔄  Parking lot reset ho gaya.")
     render_status()
 
 add_btn.on_click(on_add_clicked)
